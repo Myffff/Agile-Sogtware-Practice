@@ -7,6 +7,7 @@ const aCar = {
         {name : "Sheila Dwyer", address : "2 High Street"},
     ],
 
+    features : ['Parking assist','Alarm','Tow-bar'],
 
     type :{
         make : "Toyota",
@@ -35,4 +36,16 @@ const aCar = {
 // console.log(aCar.owner + ' drives a ' + aCar.type.make)
 // console.log(aCar.registration.year + '-' + aCar.registration.county_code + '-' + aCar.registration.number)
 // console.log( "It is a " + aCar.color.exterior + " car, " + aCar.milage + " milage, with " + aCar.color.interior.texture + " interior.")
-console.log('First owner : ' + aCar.previous_owners[0].name + "-"+ aCar.previous_owners[0].address);
+// console.log('First owner : ' + aCar.previous_owners[0].name + "-"+ aCar.previous_owners[0].address);
+for (let i = 0 ; i < aCar.features.length ; i += 1) {
+    console.log(aCar.features[i]) ;
+}
+for (let j = 0 ; j < aCar.previous_owners.length; j += 1){
+    console.log(aCar.previous_owners[j].name);
+}
+
+for (let p in aCar.type)  {
+    console.log(p.toUpperCase() + ' = ' + aCar.type[p] ) ;
+}
+
+
